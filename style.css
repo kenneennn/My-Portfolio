@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f0f2f5 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section.profile-info {
+    max-width: 650px;
+    margin: 48px auto;
+    padding: 40px 36px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px 0 rgba(60,60,120,0.10), 0 1.5px 6px 0 rgba(60,60,120,0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
+   align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    color: #444;
+    font-size: 1.04rem;
+    line-height: 1.6;
+}
+section.profile-info:hover {
+    box-shadow: 0 16px 48px 0 rgba(60,60,120,0.16), 0 3px 12px 0 rgba(60,60,120,0.10);
+    transform: translateY(-4px) scale(1.01);
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+.profile-header img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(135deg, #a5b4fc 0%, #f0f2f5 100%);
+    box-shadow: 0 4px 24px 0 rgba(80,80,160,0.10);
+    transition: box-shadow 0.3s, border 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.profile-header img:hover {
+    box-shadow: 0 8px 32px 0 rgba(80,80,160,0.18);
+    border: 5px solid #6366f1;
+}
+.profile-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.4rem;
+    color: #232946;
+    letter-spacing: 0.5px;
+}
+.profile-header h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.18rem;
+    color: #6366f1;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+.profile-header p {
+    margin: 0 0 22px 0;
+    color: #444;
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+.profile-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.profile-links li {
+    margin-bottom: 10px;
+    font-size: 1.04rem;
+}
+.profile-links a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.profile-links a:hover {
+    color: #232946;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    section.profile-info {
+        padding: 20px 8px;
+    }
+    .profile-header {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+    .profile-header img {
+        width: 110px;
+        height: 110px;
+    }
+}
