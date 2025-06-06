@@ -267,7 +267,7 @@ body.night-mode #night-mode-toggle {
   }
 }
 
-.animated-text, .logo {
+.animated-text {
   opacity: 1 !important;
   animation: bounce 1.5s infinite;
 }
@@ -306,6 +306,25 @@ body.night-mode #night-mode-toggle {
 
 .night-mode .tooltip {
   background: #f1f1f1;
+  color: #23272f;
+}
+
+/* Best Badge Styles */
+.best-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
+  color: #23272f;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(241,196,15,0.15);
+}
+.night-mode .best-badge {
+  background: linear-gradient(90deg, #f39c12, #f1c40f);
   color: #23272f;
 }
 
@@ -474,6 +493,11 @@ body.night-mode #night-mode-toggle {
   }
   .nav-links li {
     padding: 0 12px;
+  }
+  .logo-toggle-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 }
