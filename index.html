@@ -19,6 +19,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+      <button id="nightmode-toggle" aria-label="Toggle night mode">🌙</button>
     </div>
   </header>
 
@@ -40,5 +41,12 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const toggle = document.getElementById('nightmode-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('nightmode');
+    });
+  </script>
 </body>
 </html>
