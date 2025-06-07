@@ -515,6 +515,60 @@ body.night-mode #night-mode-toggle {
   }
 }
 
+/* Timeline Responsive Styles */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+}
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #f1c40f;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(241,196,15,0.18);
+}
+.night-mode .timeline-dot {
+  background: #f39c12;
+}
+.timeline-content {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex: 1;
+}
+.night-mode .timeline-content {
+  background: #23272f;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+@media (max-width: 600px) {
+  .timeline {
+    gap: 18px;
+  }
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .timeline-dot {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+  .timeline-content {
+    padding: 12px 10px;
+    font-size: 0.98rem;
+  }
+}
+
 /* Tech Stack Section Styles */
 .tech-stack-section {
   max-width: 800px;
