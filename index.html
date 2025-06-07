@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="Images/DSCF6945.gif">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <header>
@@ -60,8 +62,57 @@
         </div>
       </div>
     </div>
-    
   </section>
+  <hr class="section-divider">
+
+  <section class="about-section">
+    <div class="about-flex">
+      <img src="Images/DSCF6945.gif"alt="About Me Photo" class="about-photo">
+      <div class="about-content">
+        <h2 class="about-title">About Me</h2>
+        <p>
+          I'm Kenn, a passionate Software Developer with experience in building web applications and solving real-world problems through code. I enjoy working with modern technologies and continuously learning to improve my skills. Let's connect and create something amazing together!
+        </p>
+        <ul style="margin: 18px 0 0 0; padding: 0 0 0 18px;">
+          <li><strong>Fun Fact:</strong> I can solve a Rubik's Cube in under a minute and love hiking on weekends!</li>
+          <li><strong>Education:</strong> B.S. in Information Technology - S.Y 2024 - 2025</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr class="section-divider">
+
+  <section class="experience-section">
+    <div class="experience-flex">
+      <h2 class="experience-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Software Development Intern</h3>
+            <span class="exp-date">January 2025 – May 2025</span>
+            <h4>RADZTECH BUSINESS SOLUTIONS</h4>
+            <ul>
+              <li>Developed front-end components with ReactJS and Material-UI, integrated RESTful APIs and Node.js, managed Git workflows, and collaborated in an agile team environment.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-gap" style="height: 32px;"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>IT Student Assistant</h3>
+            <span class="exp-date">Aug 2023 - Dec 2023</span>
+             <h4>Our Lady of Pillar College - San Manuel Inc.</h4>
+             <ul>
+            <li>Provided technical support and helped manage campus IT resources. Gained hands-on experience in troubleshooting and system maintenance.</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="section-divider">
 
   <script>
     const toggleBtn = document.getElementById('night-mode-toggle');
@@ -69,7 +120,7 @@
       document.body.classList.toggle('night-mode');
       this.classList.toggle('active');
     });
-
   </script>
+
 </body>
 </html>
