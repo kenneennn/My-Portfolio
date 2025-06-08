@@ -41,10 +41,17 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(90deg, #f1c40f 0 2px, transparent 2px 40px),
+    repeating-linear-gradient(180deg, #f1c40f 0 2px, transparent 2px 40px);
+  background-size: 40px 40px;
 }
 
 .night-mode header {
-  background: #23272f;
+  background-color: #23272f;
+  background-image: repeating-linear-gradient(90deg, #f39c12 0 2px, transparent 2px 40px),
+    repeating-linear-gradient(180deg, #f39c12 0 2px, transparent 2px 40px);
+  background-size: 40px 40px;
   border-bottom: 1.5px solid #f39c12; 
 }
     
