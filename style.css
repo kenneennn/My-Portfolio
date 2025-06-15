@@ -1472,3 +1472,20 @@ body.night-mode #night-mode-toggle {
 .night-mode .hero-shaded-tiles .tile.t4 { background: rgba(0,0,0,0.18); }
 .night-mode .hero-shaded-tiles .tile.t5 { background: rgba(200,200,200,0.10); }
 .night-mode .hero-shaded-tiles .tile.t6 { background: rgba(243,156,18,0.18); }
+
+.hero-card-right {
+  margin-left: 40px;
+  align-self: flex-end;
+   margin-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-card-right {
+    margin-left: 0;
+    align-self: center;
+  }
+}
