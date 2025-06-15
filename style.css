@@ -1117,6 +1117,7 @@ body.night-mode #night-mode-toggle {
     flex-direction: column;
     gap: 20px;
     align-items: stretch;
+    padding: 26px;
   }
   .people-box {
     max-width: 100%;
