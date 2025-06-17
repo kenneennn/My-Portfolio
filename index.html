@@ -233,31 +233,41 @@
   <!-- People I've Worked With Section -->
   <section class="people-section">
     <h2 class="expertise-title">People I've Worked With</h2>
-    <div class="people-boxes">
-      <div class="people-box">
-        <img src="Images\Peopleworkwith\nen.jpg" alt="Person 1" class="people-photo">
-        <h3>Renen Rivera</h3>
-        <p>" Senior Software Developer "</p>
-        <p class="people-comment">"Kenn is a dedicated and talented developer!"</p>
+    <div class="people-carousel-wrapper" style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <button id="carousel-left" style="position:absolute; left:-40px; background:none; border:none; font-size:2rem; color:#f1c40f; cursor:pointer; z-index:2;"><i class="fas fa-chevron-left"></i></button>
+      <div class="people-boxes carousel-group" style="width:100%; display:flex; justify-content:center; align-items:center; gap:32px; transition: opacity 0.5s cubic-bezier(.4,2,.6,1); opacity:1;">
+        <div class="people-box">
+          <img src="Images\Peopleworkwith\nen.jpg" alt="Person 1" class="people-photo">
+          <h3>Renen Rivera</h3>
+          <p>" Senior Software Developer "</p>
+          <p class="people-comment">Kenn is a dedicated and talented developer! He consistently demonstrates a strong work ethic and a passion for learning new technologies. His attention to detail and commitment to delivering high-quality results make him a valuable asset to any team.</p>
+        </div>
+        <div class="people-box">
+          <img src="Images\Peopleworkwith\celso.jpg" alt="Person 2" class="people-photo">
+          <h3>Celso Laggui Jr</h3>
+          <p>" Senior Software Developer "</p>
+          <p class="people-comment">Working with Kenn was a pleasure. Kenn is an excellent collaborator who communicates effectively and adapts quickly to new challenges. His problem-solving skills and positive attitude greatly contributed to the success of our projects, and I highly recommend him for any development role.</p>
+        </div>
+        <div class="people-box">
+          <img src="Images\Peopleworkwith\raquel.jpg" alt="Person 5" class="people-photo">
+          <h3>Raquel M. Agcaoili</h3>
+          <p>"Junior Software Developer"</p>
+          <p class="people-comment">It was great working with him during our internship. He’s very proactive, easy to collaborate with, and always willing to help the team. I’ve seen how dedicated he is when it comes to solving problems and delivering quality output. He knows how to communicate his ideas.</p>
+        </div>
+        <div class="people-box">
+          <img src="Images\Peopleworkwith\joemar.jpg" alt="Person 3" class="people-photo">
+          <h3>Joemar Palting</h3>
+          <p>" Junior Software Developer "</p>
+          <p class="people-comment">Kenn's problem-solving skills are top-notch! He is always eager to tackle complex issues and finds innovative solutions efficiently. Throughout our collaboration, Kenn demonstrated reliability, technical expertise, and a willingness to help others. His dedication to continuous improvement and his ability to work well under pressure make him a standout developer and a great teammate.</p>
+        </div>
+        <div class="people-box">
+          <img src="Images\Peopleworkwith\romeo.jpg" alt="Person 4" class="people-photo">
+          <h3>Romeo T. Balingao</h3>
+          <p>"MIT"</p>
+          <p class="people-comment">Kenn is always eager to learn and grow. Highly recommended! He brings enthusiasm and a fresh perspective to every project, and his adaptability allows him to quickly master new tools and frameworks. Kenn's collaborative spirit and strong communication skills make working with him both productive and enjoyable. He is committed to excellence and consistently exceeds expectations.</p>
+        </div>
       </div>
-      <div class="people-box">
-        <img src="Images\Peopleworkwith\celso.jpg" alt="Person 2" class="people-photo">
-        <h3>Celso Laggui Jr</h3>
-        <p>" Senior Software Developer "</p>
-        <p class="people-comment">"Working with Kenn was a pleasure. He always delivers quality work."</p>
-      </div>
-      <div class="people-box">
-        <img src="Images\Peopleworkwith\joemar.jpg" alt="Person 3" class="people-photo">
-        <h3>Joemar Palting</h3>
-        <p>" Junior Software Developer "</p>
-        <p class="people-comment">"Kenn's problem-solving skills are top-notch!"</p>
-      </div>
-      <div class="people-box">
-        <img src="Images\Peopleworkwith\romeo.jpg" alt="Person 4" class="people-photo">
-        <h3>Romeo T. Balingao</h3>
-        <p>"MIT"</p>
-        <p class="people-comment">"Kenn is always eager to learn and grow. Highly recommended!"</p>
-      </div>
+      <button id="carousel-right" style="position:absolute; right:-40px; background:none; border:none; font-size:2rem; color:#f1c40f; cursor:pointer; z-index:2;"><i class="fas fa-chevron-right"></i></button>
     </div>
   </section>
   <hr class="section-divider">
@@ -277,6 +287,44 @@
       document.body.classList.toggle('night-mode');
       this.classList.toggle('active');
     });
+
+    // Carousel functionality for people-section (responsive: 3 at a time on desktop, 1 at a time on mobile)
+    const peopleBoxes = document.querySelectorAll('.people-boxes .people-box');
+    const carouselGroup = document.querySelector('.carousel-group');
+    function getGroupSize() {
+      return window.innerWidth <= 600 ? 1 : 3;
+    }
+    let currentStart = 0;
+    function showPeopleGroup(idx) {
+      const groupSize = getGroupSize();
+      carouselGroup.style.opacity = 0.3;
+      setTimeout(() => {
+        peopleBoxes.forEach((box, i) => {
+          if (i >= idx && i < idx + groupSize) {
+            box.style.display = 'flex';
+          } else {
+            box.style.display = 'none';
+          }
+        });
+        carouselGroup.style.opacity = 1;
+      }, 200);
+    }
+    document.getElementById('carousel-left').addEventListener('click', function() {
+      const groupSize = getGroupSize();
+      currentStart = (currentStart - groupSize + peopleBoxes.length) % peopleBoxes.length;
+      showPeopleGroup(currentStart);
+    });
+    document.getElementById('carousel-right').addEventListener('click', function() {
+      const groupSize = getGroupSize();
+      currentStart = (currentStart + groupSize) % peopleBoxes.length;
+      showPeopleGroup(currentStart);
+    });
+    window.addEventListener('resize', function() {
+      // Reset to first group on resize for consistency
+      currentStart = 0;
+      showPeopleGroup(currentStart);
+    });
+    showPeopleGroup(currentStart);
   </script>
 
 </body>
