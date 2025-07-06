@@ -12,28 +12,34 @@
 </head>
 <body>
   <header>
+    <div class="header-bg-pattern"></div>
     <div class="container header-flex">
       <div class="logo-toggle-row">
         <h1 class="logo">Dev. Ken</h1>
+        <span class="header-tagline">Turning Ideas Into Code</span>
+      </div>
+      <div class="header-accents">
+        <span class="header-dot dot1"></span>
       </div>
       <div class="toggle-col">
         <button id="night-mode-toggle" title="Toggle Night Mode" style="background:none;border:none;cursor:pointer;font-size:24px;margin-left:20px;">
           <i class="fas fa-moon"></i>
-          <span class="tooltip">Toggle Night Mode</span>
+          <span class="tooltip">Night Mode</span>
         </button>
       </div>
     </div>
+    <div class="header-gradient-bar"></div>
   </header>
 
   <section class="hero">
     <div class="hero-content">
       <img src="Images/Me/DSCF6945.gif" alt="Profile Picture" class="profile-pic" />
-      <div class="intro">
+      <div class="intro responsive-intro">
         <p>Hello, I'm</p>
         <h2 class="animated-text">Kennn</h2>
-        <h3>Software Developer</h3>
+        <h3>Aspiring Software Developer</h3>
         <div class="buttons">
-          <a href="Resume\RESUMEKEN.pdf" class="btn-outline" target="_blank" rel="noopener">
+          <a href="Resume/RESUME-Kenjim.pdf" class="btn-outline" target="_blank" rel="noopener">
             Download Resume
             <span class="tooltip">Download my resume</span>
           </a>
@@ -81,199 +87,113 @@
   </section>
   <hr class="section-divider">
 
-  <section class="about-section">
-    <div class="about-flex">
-      <img src="Images/Me/kenn.jpg"alt="About Me Photo" class="about-photo">
+  <section class="about-section" style="position:relative;overflow:hidden;background:linear-gradient(120deg,#fffbe6 0%,#f1c40f11 100%);box-shadow:0 4px 32px #f1c40f18,0 2px 16px #0002;">
+    <div class="about-bg-accent" style="position:absolute;top:-40px;left:-60px;width:320px;height:320px;background:radial-gradient(circle at 60% 40%,#f1c40f22 60%,transparent 100%);z-index:0;filter:blur(2px);"></div>
+    <div class="about-gradient-bar" style="height:6px;width:120px;background:linear-gradient(90deg,#f1c40f 0%,#f39c12 100%);border-radius:6px;margin:0 auto 32px auto;box-shadow:0 2px 8px #f1c40f33;opacity:0.7;position:relative;z-index:1;"></div>
+    <div class="about-flex" style="position:relative;z-index:1;">
+      <img src="Images/Me/kenn.jpg" alt="About Me Photo" class="about-photo">
       <div class="about-content">
         <h2 class="about-title">About Me</h2>
+        <hr style="border:0;border-top:2px solid #f1c40f;width:60px;margin:8px 0 18px 0;opacity:0.5;">
         <p style="text-align:justify;">
-          I'm Kenn, a passionate Software Developer with experience in building web applications and solving real-world problems through code. I enjoy working with modern technologies and continuously learning to improve my skills. I thrive in collaborative environments, value clear communication, and am always eager to take on new challenges. My adaptability and curiosity drive me to stay updated with the latest trends in software development. Let's connect and create something amazing together!
+          I recently graduated as an IT and am an aspiring Software Developer. I'm Kenn, a passionate Software Developer with experience in building web applications and solving real-world problems through code. I enjoy working with modern technologies and continuously learning to improve my skills. I thrive in collaborative environments, value clear communication, and am always eager to take on new challenges. My adaptability and curiosity drive me to stay updated with the latest trends in software development. Let's connect and create something amazing together!
         </p>
         <ul style="margin: 10px 0 0 0; padding: 0 0 0 10px;">
-          <li><strong>Fun Fact:</strong> I can solve a Rubik's Cube in under a minute and love hiking on weekends!</li>
-          <li><strong>Education:</strong> B.S. in Information Technology - S.Y 2024 - 2025</li>
+          <li style="margin-bottom:6px;"><strong>Fun Fact 1:</strong><br><span style="margin-left:12px;display:inline-block;">I can solve a Rubik's Cube in under a minute and love hiking on weekends!</span></li>
+          <li style="margin-bottom:6px;"><strong>Fun Fact 2:</strong><br><span style="margin-left:12px;display:inline-block;">I can do leg day in gym 3 times a week HAHAH</span></li>
+          <li style="margin-top:8px;list-style:none;">
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#ffe066;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:1rem;box-shadow:0 2px 8px #ffe06633;">
+              <i class="fas fa-graduation-cap" style="color:#f39c12;font-size:1.1em;"></i>
+              B.S. in Information Technology - S.Y 2024 - 2025
+            </span>
+          </li>
         </ul>
+        <div class="about-badges" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;">
+          <span class="about-badge" style="background:#f1c40f33;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:0.98rem;box-shadow:0 2px 8px #f1c40f11;border:1px solid #ffe066;">Teamwork</span>
+          <span class="about-badge" style="background:#f39c1233;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:0.98rem;box-shadow:0 2px 8px #f39c1211;border:1px solid #f39c12;">Problem Solving</span>
+          <span class="about-badge" style="background:#ffe06644;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:0.98rem;box-shadow:0 2px 8px #ffe06611;border:1px solid #ffe066;">Adaptability</span>
+          <span class="about-badge" style="background:#e0e7ef44;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:0.98rem;box-shadow:0 2px 8px #e0e7ef11;border:1px solid #e0e7ef;">Communication</span>
+          <span class="about-badge" style="background:#c9e7fa44;color:#23272f;padding:6px 16px;border-radius:16px;font-weight:600;font-size:0.98rem;box-shadow:0 2px 8px #c9e7fa11;border:1px solid #c9e7fa;">Creativity</span>
+        </div>
       </div>
     </div>
   </section>
   <div class="gap" style="height: 32px;"></div>
   <hr class="section-divider">
 
-  
-  <!-- My Expertise Section -->
-  <section class="expertise-section">
-    <h2 class="expertise-title">My Expertise</h2>
-    <div class="expertise-boxes">
+  <section class="expertise-section" style="position:relative;overflow:hidden;background:linear-gradient(120deg,#fffbe6 0%,#f1c40f11 100%);box-shadow:0 4px 32px #f1c40f18,0 2px 16px #0002;">
+    <div class="expertise-bg-accent" style="position:absolute;top:-60px;left:-80px;width:340px;height:340px;background:radial-gradient(circle at 60% 40%,#f1c40f33 60%,transparent 100%);z-index:0;filter:blur(4px);"></div>
+    <h2 class="expertise-title" style="position:relative;z-index:1;">My Expertise</h2>
+    <div class="expertise-gradient-bar" style="height:6px;width:120px;background:linear-gradient(90deg,#f1c40f 0%,#f39c12 100%);border-radius:6px;margin:0 auto 32px auto;box-shadow:0 2px 8px #f1c40f33;opacity:0.7;position:relative;z-index:1;"></div>
+    <div class="expertise-boxes" style="margin-top:28px;position:relative;z-index:1;">
       <div class="expertise-box">
-        <div class="expertise-icon"><img src="Images\Exeprtise_icon\desktopdevelopmeny.png" alt="Desktop Icon"></div>
+        <div class="expertise-icon">
+          <img src="Images/Exeprtise_icon/desktopdevelopmeny.png" alt="Desktop Development Icon" style="width:48px;height:48px;object-fit:contain;" />
+        </div>
         <h3>Desktop Development</h3>
         <p>I design and build robust desktop applications using technologies like C#, Java, and .NET, focusing on performance, usability, and seamless user experience for business and personal productivity.</p>
       </div>
       <div class="expertise-box">
-        <div class="expertise-icon"><img src="Images\Exeprtise_icon\web_development.png" alt="Web Development Icon"></div>
+        <div class="expertise-icon">
+          <img src="Images/Exeprtise_icon/web_development.png" alt="Web Development Icon" style="width:48px;height:48px;object-fit:contain;" />
+        </div>
         <h3>Web Development</h3>
         <p>I create modern, responsive web applications using HTML, CSS, JavaScript, React, and backend technologies, ensuring fast, secure, and scalable solutions for diverse client needs.</p>
-      </div> 
+      </div>
       <div class="expertise-box">
-        <div class="expertise-icon"><img src="Images\Exeprtise_icon\API.png" alt="API Development Icon"></div>
-        <h3>Integration</h3>
+        <div class="expertise-icon integration-icon">
+          <img src="Images/Exeprtise_icon/API.png" alt="API Integration Icon" style="width:48px;height:48px;object-fit:contain;" />
+        </div>
+        <h3>API Integration</h3>
         <p>I specialize in integrating APIs, third-party services, and legacy systems, enabling smooth data flow and automation between platforms to enhance business processes and connectivity.</p>
       </div>
     </div>
   </section>
+  <div class="gap" style="height: 32px;"></div>
+
   <hr class="section-divider">
-  
-  <section class="experience-section">
-      <h2 class="experience-title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Software Development Intern</h3>
-            <span class="exp-date">January 2025 – May 2025</span>
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
-              <img src="Images/Logocompany/RADZTECH.jpg" alt="RADZTECH Logo" style="height:32px;width:auto;border-radius:6px;">
-              <h4 style="margin:0;">RADZTECH BUSINESS SOLUTIONS</h4>
-            </div>
-            <ul>
-              <li>Developed front-end components with ReactJS and Material-UI, integrated RESTful APIs and Node.js, managed Git workflows, and collaborated in an agile team environment.</li>
-            </ul>
+
+  <section class="experience-section" style="position:relative;overflow:hidden;background:linear-gradient(120deg,#fffbe6 0%,#f1c40f11 100%);box-shadow:0 4px 32px #f1c40f18,0 2px 16px #0002;">
+    <div class="experience-bg-accent" style="position:absolute;top:-40px;left:-60px;width:320px;height:320px;background:radial-gradient(circle at 60% 40%,#f1c40f22 60%,transparent 100%);z-index:0;filter:blur(2px);"></div>
+    <h2 class="experience-title" style="position:relative;z-index:1;">Experience</h2>
+    <div class="experience-gradient-bar" style="height:6px;width:120px;background:linear-gradient(90deg,#f1c40f 0%,#f39c12 100%);border-radius:6px;margin:0 auto 32px auto;box-shadow:0 2px 8px #f1c40f33;opacity:0.7;position:relative;z-index:1;"></div>
+    <div class="timeline" style="position:relative;z-index:1;">
+      <div class="timeline-vertical-line"></div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Software Development Intern</h3>
+          <span class="exp-date">January 2025 – May 2025</span>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+            <img src="Images/Logocompany/RADZTECH.jpg" alt="RADZTECH Logo" style="height:32px;width:auto;border-radius:6px;">
+            <h4 style="margin:0;">RADZTECH BUSINESS SOLUTIONS</h4>
           </div>
+          <ul>
+            <li>Developed front-end components with ReactJS and Material-UI, integrated RESTful APIs and Node.js, managed Git workflows, and collaborated in an agile team environment.</li>
+          </ul>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>IT Student Assistant</h3>
-            <span class="exp-date">Aug 2023 - Dec 2023</span>
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
-              <img src="Images/Logocompany/OLPCSMI.jpg" alt="OLPCSMI Logo" style="height:32px;width:auto;border-radius:6px;">
-              <h4 style="margin:0;">Our Lady of Pillar College - San Manuel Inc.</h4>
-            </div>
-             <ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>IT Assistant</h3>
+          <span class="exp-date">Aug 2023 - Dec 2023</span>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+            <img src="Images/Logocompany/OLPCSMI.jpg" alt="OLPCSMI Logo" style="height:32px;width:auto;border-radius:6px;">
+            <h4 style="margin:0;">Our Lady of Pillar College - San Manuel Inc.</h4>
+          </div>
+           <ul>
             <li>Provided technical support and helped manage campus IT resources. Gained hands-on experience in troubleshooting and system maintenance.</li>
           </ul>
           </div>
         </div>
       </div>
   </section>
-   <div class="gap" style="height: 32px;"></div>
+  <div class="gap" style="height: 32px;"></div>
+
   <hr class="section-divider">
 
-
-  <section class="tech-stack-section">
-      <h2 class="expertise-title">Tech Skills</h2>
-      <div class="tech-stack-categories">
-        <div class="tech-category">
-          <h3>Desktop Programming</h3>
-          <ul class="tech-list">
-            <li><i class="fab fa-microsoft"></i> C# (.NET)</li>
-            <li><i class="fab fa-java"></i> Java</li>
-            <li><i class="fas fa-code"></i> VB.NET</li>
-            <li><i class="fas fa-code"></i> C++</li>
-            <li><i class="fab fa-microsoft"></i> ASP.NET</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>Web Development</h3>
-          <ul class="tech-list">
-            <li><strong>Frontend:</strong></li>
-            <li><i class="fab fa-html5"></i> HTML5</li>
-            <li><i class="fab fa-css3-alt"></i> CSS3</li>
-            <li><i class="fab fa-js"></i> JavaScript (JS)</li>
-            <li><i class="fab fa-react"></i> React.js</li>
-            <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-            <li><i class="fas fa-layer-group"></i> Material UI</li>
-            <li style="margin-top:10px;"><strong>Backend:</strong></li>
-            <li><i class="fab fa-node-js"></i> Node.js</li>
-            <li><i class="fab fa-php"></i> PHP</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>Version Control</h3>
-          <ul class="tech-list">
-            <li><i class="fab fa-git-alt"></i> Git</li>
-            <li><i class="fab fa-github"></i> GitHub</li>
-            <li><i class="fab fa-gitlab"></i> GitLab</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>Database</h3>
-          <ul class="tech-list">
-            <li><i class="fas fa-database"></i> MySQL</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>UI/UX & Design</h3>
-          <ul class="tech-list">
-            <li><i class="fab fa-figma"></i> Figma</li>
-            <li><i class="fas fa-paint-brush"></i> Canva</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>Other Tools</h3>
-          <ul class="tech-list">
-            <li><i class="fab fa-discord"></i> Discord</li>
-            <li><i class="fab fa-npm"></i> npm</li>
-            <li><i class="fas fa-file-word"></i> Microsoft Office</li>
-            <li><i class="fas fa-flask"></i> Postman</li>
-          </ul>
-        </div>
-        <div class="tech-category">
-          <h3>Development Tools</h3>
-          <ul class="tech-list">
-            <li><i class="fas fa-code"></i> Microsoft Visual Studio</li>
-            <li><i class="fas fa-code"></i> Visual Studio Code</li>
-            <li><i class="fas fa-database"></i> Navicat</li>
-          </ul>
-        </div>
-      </div>
-  </section>
-  <hr class="section-divider">
-
-  <!-- People I've Worked With Section -->
-  <section class="people-section">
-    <h2 class="expertise-title">People I've Worked With</h2>
-    <div class="people-carousel-wrapper" style="position:relative; display:flex; align-items:center; justify-content:center;">
-      <button id="carousel-left" style="position:absolute; left:-40px; background:none; border:none; font-size:2rem; color:#f1c40f; cursor:pointer; z-index:2;"><i class="fas fa-chevron-left"></i></button>
-      <div class="people-boxes carousel-group" style="width:100%; display:flex; justify-content:center; align-items:center; gap:32px; transition: opacity 0.5s cubic-bezier(.4,2,.6,1); opacity:1;">
-        <div class="people-box">
-          <img src="Images\Peopleworkwith\nen.jpg" alt="Person 1" class="people-photo">
-          <h3>Renen Rivera</h3>
-          <p>" Senior Software Developer "</p>
-          <p class="people-comment">Kenn is a dedicated and talented developer! He consistently demonstrates a strong work ethic and a passion for learning new technologies. His attention to detail and commitment to delivering high-quality results make him a valuable asset to any team.</p>
-        </div>
-        <div class="people-box">
-          <img src="Images\Peopleworkwith\celso.jpg" alt="Person 2" class="people-photo">
-          <h3>Celso Laggui Jr</h3>
-          <p>" Senior Software Developer "</p>
-          <p class="people-comment">Working with Kenn was a pleasure. Kenn is an excellent collaborator who communicates effectively and adapts quickly to new challenges. His problem-solving skills and positive attitude greatly contributed to the success of our projects, and I highly recommend him for any development role.</p>
-        </div>
-        <div class="people-box">
-          <img src="Images\Peopleworkwith\raquel.jpg" alt="Person 5" class="people-photo">
-          <h3>Raquel M. Agcaoili</h3>
-          <p>"Junior Software Developer"</p>
-          <p class="people-comment">It was great working with him during our internship. He’s very proactive, easy to collaborate with, and always willing to help the team. I’ve seen how dedicated he is when it comes to solving problems and delivering quality output. He knows how to communicate his ideas.</p>
-        </div>
-        <div class="people-box">
-          <img src="Images\Peopleworkwith\joemar.jpg" alt="Person 3" class="people-photo">
-          <h3>Joemar Palting</h3>
-          <p>" Junior Software Developer "</p>
-          <p class="people-comment">Kenn's problem-solving skills are top-notch! He is always eager to tackle complex issues and finds innovative solutions efficiently. Throughout our collaboration, Kenn demonstrated reliability, technical expertise, and a willingness to help others. His dedication to continuous improvement and his ability to work well under pressure make him a standout developer and a great teammate.</p>
-        </div>
-        <div class="people-box">
-          <img src="Images\Peopleworkwith\romeo.jpg" alt="Person 4" class="people-photo">
-          <h3>Romeo T. Balingao</h3>
-          <p>"MIT"</p>
-          <p class="people-comment">Kenn is always eager to learn and grow. Highly recommended! He brings enthusiasm and a fresh perspective to every project, and his adaptability allows him to quickly master new tools and frameworks. Kenn's collaborative spirit and strong communication skills make working with him both productive and enjoyable. He is committed to excellence and consistently exceeds expectations.</p>
-        </div>
-      </div>
-      <button id="carousel-right" style="position:absolute; right:-40px; background:none; border:none; font-size:2rem; color:#f1c40f; cursor:pointer; z-index:2;"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </section>
-  <hr class="section-divider">
   <footer class="footer-section">
     <div class="footer-flex">
-      <p class="footer-text">&copy; 2024 Kenn. All rights reserved.</p>
+      <p class="footer-text">&copy; 2025 Kenn. All rights reserved.</p>
       <div class="footer-social-icons">
         <a href="https://www.linkedin.com/in/kenjim-grande-87575435b" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/kenneennn" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
@@ -287,44 +207,6 @@
       document.body.classList.toggle('night-mode');
       this.classList.toggle('active');
     });
-
-    // Carousel functionality for people-section (responsive: 3 at a time on desktop, 1 at a time on mobile)
-    const peopleBoxes = document.querySelectorAll('.people-boxes .people-box');
-    const carouselGroup = document.querySelector('.carousel-group');
-    function getGroupSize() {
-      return window.innerWidth <= 600 ? 1 : 3;
-    }
-    let currentStart = 0;
-    function showPeopleGroup(idx) {
-      const groupSize = getGroupSize();
-      carouselGroup.style.opacity = 0.3;
-      setTimeout(() => {
-        peopleBoxes.forEach((box, i) => {
-          if (i >= idx && i < idx + groupSize) {
-            box.style.display = 'flex';
-          } else {
-            box.style.display = 'none';
-          }
-        });
-        carouselGroup.style.opacity = 1;
-      }, 200);
-    }
-    document.getElementById('carousel-left').addEventListener('click', function() {
-      const groupSize = getGroupSize();
-      currentStart = (currentStart - groupSize + peopleBoxes.length) % peopleBoxes.length;
-      showPeopleGroup(currentStart);
-    });
-    document.getElementById('carousel-right').addEventListener('click', function() {
-      const groupSize = getGroupSize();
-      currentStart = (currentStart + groupSize) % peopleBoxes.length;
-      showPeopleGroup(currentStart);
-    });
-    window.addEventListener('resize', function() {
-      // Reset to first group on resize for consistency
-      currentStart = 0;
-      showPeopleGroup(currentStart);
-    });
-    showPeopleGroup(currentStart);
   </script>
 
 </body>
