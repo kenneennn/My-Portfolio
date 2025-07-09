@@ -959,7 +959,8 @@ footer.footer-section {
   width: 100%;
   background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%);
   padding: 48px 0 32px 0;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .night-mode .techstack-section {
   background: linear-gradient(120deg, #23272f 60%, #343a40 100%);
@@ -969,27 +970,42 @@ footer.footer-section {
   font-size: 2rem;
   font-weight: 700;
   color: #23272f;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
   letter-spacing: 1px;
+}
+.techstack-desc {
+  text-align: center;
+  font-size: 1.08rem;
+  color: #444;
+  margin: 0 auto 24px auto;
+  max-width: 700px;
+  line-height: 1.6;
 }
 .night-mode .techstack-title {
   color: #ffe066;
 }
 .techstack-categories {
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
 }
 .techstack-category {
   background: #fffbe6;
   border-radius: 16px;
   box-shadow: 0 2px 12px #f1c40f18;
   padding: 28px 24px 18px 24px;
-  min-width: 220px;
-  max-width: 320px;
+  min-width: 260px;
+  max-width: 370px;
+  width: 100%;
   margin-bottom: 24px;
-  flex: 1 1 260px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 .night-mode .techstack-category {
   background: #23272f;
@@ -1003,78 +1019,159 @@ footer.footer-section {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 .night-mode .techstack-category h3 {
   color: #ffe066;
 }
-.techstack-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 14px;
+.techstack-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 140px;
+  box-sizing: border-box;
 }
-@media (max-width: 700px) {
-  .techstack-list {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-}
-.techstack-badge {
-  background: #f1c40f33;
-  color: #23272f;
-  padding: 10px 18px;
+.enhanced-carousel {
+  background: linear-gradient(90deg, #f8fafc 80%, #f1c40f11 100%);
   border-radius: 16px;
+  box-shadow: 0 2px 12px #f1c40f18, 0 2px 8px #0001;
+}
+.night-mode .enhanced-carousel {
+  background: linear-gradient(90deg, #23272f 80%, #f39c1211 100%);
+  box-shadow: 0 2px 12px #0008;
+}
+.carousel-multi-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.carousel-list {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  padding: 10px 0 10px 0;
+  scrollbar-width: none;
+}
+.carousel-row1 { animation: carousel-scroll 22s linear infinite; }
+.carousel-row2 { animation: carousel-scroll-reverse 28s linear infinite; }
+.carousel-row3 { animation: carousel-scroll 32s linear infinite; }
+@keyframes carousel-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes carousel-scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.carousel-fade {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, #fff 60%, transparent 100%);
+}
+.carousel-fade-right {
+  right: 0;
+  background: linear-gradient(270deg, #fff 60%, transparent 100%);
+}
+.night-mode .carousel-fade-left {
+  background: linear-gradient(90deg, #23272f 60%, transparent 100%);
+}
+.night-mode .carousel-fade-right {
+  background: linear-gradient(270deg, #23272f 60%, transparent 100%);
+}
+.enhanced-badge {
+  font-size: 1.08rem;
+  padding: 12px 18px;
+  border-radius: 22px;
+  background: #fffbe6;
+  color: #23272f;
+  box-shadow: 0 2px 8px #f1c40f22;
+  border: 1.5px solid #ffe066;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  margin-bottom: 0;
   font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px #f1c40f11;
-  border: 1px solid #ffe066;
+  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 10px;
+  width: 160px;
   min-width: 120px;
+  max-width: 200px;
   justify-content: center;
-  height: 40px;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-align: center;
+  height: 44px;
+  box-sizing: border-box;
 }
-.night-mode .techstack-badge {
+.enhanced-badge i {
+  font-size: 1.3em;
+}
+.night-mode .enhanced-badge {
   background: #23272f;
   color: #ffe066;
-  border: 1px solid #f39c12;
+  border: 1.5px solid #f39c12;
   box-shadow: 0 2px 8px #23272f88;
 }
-.techstack-badge i {
-  font-size: 1.2em;
-}
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .techstack-categories {
-    flex-direction: column;
-    align-items: center;
     gap: 18px;
   }
   .techstack-category {
-    width: 90%;
-    min-width: unset;
-    max-width: unset;
+    min-width: 220px;
+    max-width: 100%;
     padding: 18px 8px 14px 8px;
   }
-  .techstack-badge {
-    min-width: 100px;
-    font-size: 0.98rem;
-    height: 36px;
-    padding: 8px 10px;
+}
+@media (max-width: 900px) {
+  .techstack-section {
+    padding: 32px 0 18px 0;
   }
+  .techstack-title {
+    font-size: 1.3rem;
+  }
+  .techstack-desc {
+    font-size: 0.98rem;
+    margin-bottom: 18px;
+  }
+  .techstack-categories {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .techstack-category {
+    width: 98%;
+    min-width: unset;
+    max-width: unset;
+    padding: 14px 4px 10px 4px;
+  }
+  .carousel-list { gap: 10px; padding: 8px 0; }
+  .carousel-fade { width: 24px; }
+  .enhanced-badge { font-size: 0.98rem; padding: 7px 8px; width: 110px; min-width: 80px; height: 36px; }
 }
 @media (max-width: 600px) {
+  .techstack-section {
+    padding: 18px 0 8px 0;
+  }
   .techstack-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .techstack-desc {
+    font-size: 0.92rem;
+    margin-bottom: 10px;
   }
   .techstack-category h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
-  .techstack-badge {
-    font-size: 0.92rem;
-    padding: 6px 8px;
-    min-width: 80px;
-    height: 32px;
-  }
+  .carousel-list { gap: 6px; padding: 4px 0; }
+  .carousel-fade { width: 10px; }
+  .enhanced-badge { font-size: 0.88rem; padding: 4px 4px; width: 80px; min-width: 60px; height: 28px; }
 }
