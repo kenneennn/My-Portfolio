@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Website - Demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { background: #f8fafc; margin: 0; font-family: 'Poppins', sans-serif; }
+    .demo-container {
+      max-width: 480px;
+      margin: 48px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #0004, 0 2px 12px #f1c40f22;
+      padding: 32px 18px 24px 18px;
+    }
+    .demo-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #23272f;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .demo-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      justify-content: center;
+    }
+    .demo-tab {
+      background: #f1c40f22;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #23272f;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .demo-tab.active, .demo-tab:hover {
+      background: #f1c40f;
+      color: #23272f;
+    }
+    .demo-tab-content {
+      padding: 18px 0 0 0;
+      min-height: 120px;
+      text-align: center;
+    }
+    .demo-screenshot-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      .demo-container {
+        max-width: 98vw;
+        padding: 12px 2vw 10px 2vw;
+      }
+      .demo-tab { padding: 8px 10px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="demo-title">Personal Portfolio Website</div>
+    <div class="demo-tabs">
+      <button class="demo-tab active" id="demoTabWebsite">Website View</button>
+    </div>
+    <div class="demo-tab-content" id="demoWebsiteView">
+      <div class="demo-screenshot-placeholder">
+        <span style="font-size:2.2rem;color:#f39c12;"><i class="fas fa-globe"></i></span>
+        <p>Portfolio website screenshot or content goes here.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

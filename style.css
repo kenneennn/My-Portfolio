@@ -974,14 +974,14 @@ footer.footer-section {
   letter-spacing: 1px;
 }
 .techstack-desc {
-  text-align: center;
+  text-align: justify;
   font-size: 1.08rem;
   color: #444;
   margin: 0 auto 24px auto;
   max-width: 700px;
   line-height: 1.6;
 }
-.night-mode .techstack-title {
+.night-mode .techstack-title, .night-mode .techstack-desc  {
   color: #ffe066;
 }
 .techstack-categories {
@@ -1141,6 +1141,7 @@ footer.footer-section {
   .techstack-desc {
     font-size: 0.98rem;
     margin-bottom: 18px;
+    text-align: justify;
   }
   .techstack-categories {
     flex-direction: column;
@@ -1162,11 +1163,12 @@ footer.footer-section {
     padding: 18px 0 8px 0;
   }
   .techstack-title {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
   .techstack-desc {
     font-size: 0.92rem;
     margin-bottom: 10px;
+    text-align: justify;
   }
   .techstack-category h3 {
     font-size: 0.95rem;
