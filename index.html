@@ -264,24 +264,26 @@
   <div class="gap" style="height: 32px;"></div>
   <hr class="section-divider">
 
-  <section class="projects-section">
+  <section class="projects-section enhanced-projects-section">
     <div class="container">
-      <h2 class="projects-title">My Projects</h2>
-      <p class="projects-desc">Here are some of the projects I have worked on, showcasing my skills in software and web development. Click on a project to learn more.</p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image" style="background:#f1c40f22;display:flex;align-items:justify;justify-content:justify;height:140px;border-radius:12px;">
-            <span style="font-size:2.5rem;color:#f39c12;"><i class="fas fa-laptop-code"></i></span>
+      <h2 class="projects-title enhanced-projects-title">My Projects</h2>
+      <p class="projects-desc enhanced-projects-desc">Here are some of the projects I have worked on, showcasing my skills in software and web development. Click on a project to learn more.</p>
+      <div class="projects-grid enhanced-projects-grid">
+        <div class="project-card enhanced-project-card">
+          <div class="project-accent-bar"></div>
+          <div class="project-image" style="background:linear-gradient(120deg,#f1c40f 60%,#ffe066 100%);display:flex;align-items:center;justify-content:center;height:160px;border-radius:18px;flex-direction:column;">
+            <img src="Videos-Projects/project-image.jpg" alt="Project Image" style="max-width:90%;max-height:120px;border-radius:18px;border:4px solid #ffe066;box-shadow:0 8px 32px #f1c40f55,0 2px 12px #0002;">
           </div>
-          <h3 class="project-title">Integrated Information Management with Geographic Information System</h3>
+          <h3 class="project-title">Integrated Information Management with GIS</h3>
           <p class="project-desc">A comprehensive integrated web and desktop solution for barangay management. The system features a web-based chatbot for instant FAQ support, advanced data mining for actionable insights, and seamless GIS integration for mapping and analytics. Designed to streamline operations, improve decision-making, and enhance citizen engagement.</p>
           <div class="project-links">
             <a href="project1-demo.html" class="project-link" target="_blank" rel="noopener">View</a>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image" style="background:#f1c40f22;display:flex;align-items:center;justify-content:center;height:140px;border-radius:12px;">
-            <span style="font-size:2.5rem;color:#f39c12;"><i class="fas fa-mobile-alt"></i></span>
+        <div class="project-card enhanced-project-card">
+          <div class="project-accent-bar"></div>
+          <div class="project-image" style="background:linear-gradient(120deg,#f1c40f 60%,#ffe066 100%);display:flex;align-items:center;justify-content:center;height:160px;border-radius:18px;flex-direction:column;">
+            <img src="Videos-Projects/project-image.jpg" alt="Project Image" style="max-width:90%;max-height:120px;border-radius:18px;border:4px solid #ffe066;box-shadow:0 8px 32px #f1c40f55,0 2px 12px #0002;">
           </div>
           <h3 class="project-title">Personal Portfolio Website</h3>
           <p class="project-desc">A modern, responsive portfolio website designed to showcase my skills, projects, and professional experience. Built with HTML, CSS, and JavaScript, it features interactive sections, a dynamic tech stack carousel, and a clean, user-friendly design for both desktop and mobile devices.</p>
@@ -484,9 +486,9 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  height: 140px;
+  height: 160px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 18px;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -543,38 +545,177 @@
   background: #f39c12;
   color: #fff;
 }
+.enhanced-projects-section {
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%);
+  padding: 56px 0 40px 0;
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #f1c40f18, 0 2px 16px #0002;
+}
+.night-mode .enhanced-projects-section {
+  background: linear-gradient(120deg, #23272f 60%, #343a40 100%);
+}
+.enhanced-projects-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #23272f;
+  margin-bottom: 14px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px #f1c40f22;
+}
+.night-mode .enhanced-projects-title {
+  color: #ffe066;
+}
+.enhanced-projects-desc {
+  text-align: center;
+  font-size: 1.13rem;
+  color: #444;
+  margin: 0 auto 32px auto;
+  max-width: 700px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.night-mode .enhanced-projects-desc {
+  color: #ffe066;
+}
+.enhanced-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+.enhanced-project-card {
+  background: linear-gradient(120deg,#fffbe6 80%,#f1c40f11 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 18px #f1c40f22, 0 2px 8px #0001;
+  border: 2px solid #ffe066;
+  padding: 32px 22px 22px 22px;
+  min-width: 260px;
+  max-width: 360px;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s cubic-bezier(.4,2,.6,1), border 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.enhanced-project-card:hover {
+  transform: translateY(-10px) scale(1.045);
+  box-shadow: 0 12px 36px #f1c40f44, 0 2px 12px #0002;
+  border: 2px solid #f1c40f;
+}
+.night-mode .enhanced-project-card {
+  background: linear-gradient(120deg,#23272f 80%,#343a40 100%);
+  box-shadow: 0 2px 12px #0008;
+  border: 2px solid #f39c12;
+}
+.project-accent-bar {
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg,#f1c40f 0%,#f39c12 100%);
+  border-radius: 6px;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 2px 8px #f1c40f33;
+  opacity: 0.7;
+}
+.enhanced-project-card .project-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #23272f;
+  margin: 18px 0 10px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.night-mode .enhanced-project-card .project-title {
+  color: #ffe066;
+}
+.enhanced-project-card .project-desc {
+  text-align: justify;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  min-height: 60px;
+  font-weight: 500;
+}
+.night-mode .enhanced-project-card .project-desc {
+  color: #ffe066;
+}
+.enhanced-project-card .project-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.enhanced-project-card .project-link {
+  background: #f1c40f;
+  color: #23272f;
+  padding: 10px 26px;
+  border-radius: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #f1c40f22;
+  border: none;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+.enhanced-project-card .project-link:hover {
+  background: #f39c12;
+  color: #fff;
+  box-shadow: 0 4px 16px #f1c40f55;
+}
+.night-mode .enhanced-project-card .project-link {
+  background: #ffe066;
+  color: #23272f;
+}
+.night-mode .enhanced-project-card .project-link:hover {
+  background: #f39c12;
+  color: #fff;
+}
 @media (max-width: 900px) {
-  .projects-grid {
-    gap: 18px;
-  }
-  .project-card {
+  .carousel-list { gap: 16px; padding: 12px 0; }
+  .carousel-fade { width: 32px; }
+  .enhanced-badge { font-size: 0.98rem; padding: 8px 16px; width: 130px; }
+  .enhanced-projects-grid { gap: 22px; }
+  .enhanced-project-card {
     min-width: 180px;
     max-width: 98vw;
-    padding: 14px 4px 10px 4px;
+    padding: 18px 6px 12px 6px;
   }
-  .project-title {
-    font-size: 1.05rem;
+  .enhanced-project-card .project-title {
+    font-size: 1.08rem;
   }
-  .project-desc {
-    font-size: 0.97rem;
+  .enhanced-project-card .project-desc {
+    font-size: 0.98rem;
     min-height: 40px;
   }
 }
 @media (max-width: 600px) {
-  .projects-section {
+  .carousel-list { gap: 10px; padding: 8px 0; }
+  .carousel-fade { width: 18px; }
+  .enhanced-badge { font-size: 0.92rem; padding: 6px 10px; width: 100px; }
+  .enhanced-projects-section {
     padding: 18px 0 8px 0;
+    border-radius: 10px;
   }
-  .projects-title {
-    font-size: 1.1rem;
+  .enhanced-projects-title {
+    font-size: 1.18rem;
   }
-  .projects-desc {
+  .enhanced-projects-desc {
     font-size: 0.92rem;
     margin-bottom: 10px;
   }
-  .project-title {
-    font-size: 0.95rem;
+  .enhanced-project-card .project-title {
+    font-size: 0.98rem;
   }
-  .project-card {
+  .enhanced-project-card {
     min-width: 120px;
     max-width: 100vw;
     padding: 8px 2px 6px 2px;
@@ -583,7 +724,7 @@
     height: 90px;
     margin-bottom: 6px;
   }
-  .project-desc {
+  .enhanced-project-card .project-desc {
     font-size: 0.91rem;
     min-height: 20px;
   }
